@@ -8,7 +8,7 @@ html, body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.5;
     color: #000;
-    background-color: #fffaf0;
+    background-color:white;
 }
 
 .page {
@@ -22,7 +22,7 @@ main {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 0 20px;
     width: 100%;
@@ -263,6 +263,8 @@ main {
     border: 1px solid #e0e0e0;
     border-radius: 3px;
     overflow: hidden;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .footer__mail-field {
@@ -276,11 +278,12 @@ main {
 }
 
 .footer__mail-field::placeholder {
-    color: #f0f0f0;
+    color: white;
 }
 
 .footer__mail-button {
-    background-color: #24c9bb;
+    color: #000000;
+    background-color: #4db6ac;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
@@ -290,7 +293,7 @@ main {
 }
 
 .footer__mail-button::after {
-    content: url("../icons/send-mail.svg");
+    content: url("./images/mail.svg");
 }
 
 .footer__social {
