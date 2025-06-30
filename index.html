@@ -12,7 +12,13 @@
   <div class="logo">
     <img src="images/logo.svg" alt="Логотип YouTalk" class="logo-img" />
   </div>
-  <nav class="navigation">
+  <nav class="navigation" role="navigation" aria-label="Основное меню">
+    <input type="checkbox" id="menuToggle" class="menu-toggle" />
+    <label for="menuToggle" class="burger" aria-label="Открыть меню">
+      <div></div>
+      <div></div>
+      <div></div>
+    </label>
     <ul class="nav-links">
       <li><a href="#">О нас</a></li>
       <li><a href="#">Тарифы</a></li>
@@ -23,31 +29,31 @@
       <li><a href="#">FAQ</a></li>
     </ul>
     <div class="button-header">
-      <button class="button">Подобрать психолога</button>
+      <button class="button" type="button">Подобрать психолога</button>
     </div>
   </nav>
 </header>
 <main>
   <div class="content">
-    <nav class="breadcrumbs">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
       <a href="index.html">Главная</a>
-      <span>&gt;</span>
+      <span aria-hidden="true">&gt;</span>
       <a href="index.html">Блог</a>
     </nav>
     <h1 class="main-title">Блог</h1>
-    <div class="filter">
-      <button class="filter__button filter__button--active">☺️ Все</button>
-      <button class="filter__button">Тревога</button>
-      <button class="filter__button">Насилие</button>
-      <button class="filter__button">Эмоции</button>
-      <button class="filter__button">Депрессия</button>
-      <button class="filter__button">Советы психолога</button>
-      <button class="filter__button">Травмы</button>
-      <button class="filter__button">Психологические теории</button>
-      <button class="filter__button">🦄 Самооценка</button>
-      <button class="filter__button">Психические расстройства</button>
+    <div class="filter" role="list">
+      <button class="filter__button filter__button--active" type="button">☺️ Все</button>
+      <button class="filter__button" type="button">Тревога</button>
+      <button class="filter__button" type="button">Насилие</button>
+      <button class="filter__button" type="button">Эмоции</button>
+      <button class="filter__button" type="button">Депрессия</button>
+      <button class="filter__button" type="button">Советы психолога</button>
+      <button class="filter__button" type="button">Травмы</button>
+      <button class="filter__button" type="button">Психологические теории</button>
+      <button class="filter__button" type="button">🦄 Самооценка</button>
+      <button class="filter__button" type="button">Психические расстройства</button>
     </div>
-    <section class="posts">
+    <section class="posts" aria-label="Список блог-постов">
       <div class="posts-row">
         <article class="post">
           <img src="images/Rectangle 928.png" alt="Эмоциональное выгорание" class="post-image" />
@@ -60,7 +66,6 @@
             </div>
           </div>
         </article>
-
         <article class="post">
           <img src="images/Rectangle 929.png" alt="Управление страхами" class="post-image" />
           <div class="post-text-wrapper">
@@ -72,7 +77,6 @@
             </div>
           </div>
         </article>
-
         <article class="post">
           <img src="images/Rectangle 930.png" alt="Самооценка и уверенность" class="post-image" />
           <div class="post-text-wrapper">
@@ -84,7 +88,6 @@
             </div>
           </div>
         </article>
-
         <article class="post">
           <img src="images/Rectangle 931.png" alt="Работа с эмоциями" class="post-image" />
           <div class="post-text-wrapper">
@@ -109,7 +112,7 @@
         </article>
       </div>
       <div class="load-more">
-        <button class="load-more__button button">Ещё</button>
+        <button class="load-more__button button" type="button">Ещё</button>
       </div>
     </section>
   </div>
@@ -117,7 +120,7 @@
 <footer class="footer">
   <div class="container">
     <div class="footer__content">
-      <nav class="footer__navigation">
+      <nav class="footer__navigation" aria-label="Футер навигация">
         <ul class="footer__menu">
           <li class="footer__menu-item"><a href="#">О нас</a></li>
           <li class="footer__menu-item"><a href="#">Тарифы</a></li>
@@ -133,32 +136,32 @@
       </nav>
       <div class="footer__mail">
         <p class="footer__mail-text">Одно письмо в неделю со свежими новостями и акциями</p>
-        <div class="footer__mail-input">
-          <label>
-            <input class="footer__mail-field" type="email" placeholder="Ваш e-mail" />
-          </label>
-          <button class="footer__mail-button button">Подписаться</button>
-        </div>
+        <form class="footer__mail-input" action="#" method="post" novalidate>
+          <input type="email" class="footer__mail-field" placeholder="Введите ваш email" aria-label="Введите ваш email" required />
+          <button type="submit" class="footer__mail-button">Подписаться</button>
+        </form>
         <p class="footer__mail-policy">
           Подписываясь, я соглашаюсь на обработку персональных данных в соответствии с ФЗ РФ № 152-ФЗ «О персональных данных», а также с Политикой конфиденциальности
         </p>
       </div>
 
-      <div class="footer__social">
+      <div class="footer__social" aria-label="Социальные сети">
         <img src="images/skolkovo.svg" alt="Участник Сколково" />
         <div class="footer__social-icons">
-          <img class="footer__social-icon" src="images/vk.svg" alt="vk">
-          <img class="footer__social-icon" src="images/tg.svg" alt="telegram">
-          <img class="footer__social-icon" src="images/x.svg" alt="twitter/x">
-          <img class="footer__social-icon" src="images/dzen.svg" alt="yandex dzen">
+          <a href="#" aria-label="Вконтакте"><img class="footer__social-icon" src="images/vk.svg" alt="vk" /></a>
+          <a href="#" aria-label="Телеграм"><img class="footer__social-icon" src="images/tg.svg" alt="telegram" /></a>
+          <a href="#" aria-label="Твиттер / X"><img class="footer__social-icon" src="images/x.svg" alt="twitter/x" /></a>
+          <a href="#" aria-label="Яндекс Дзен"><img class="footer__social-icon" src="images/dzen.svg" alt="yandex dzen" /></a>
         </div>
       </div>
     </div>
-    <hr class="footer__line">
+    <hr class="footer__line" />
     <div class="footer__bottom">
-      <p>©Youtalk, 2018 – 2022</p>
-      <a href="#">Юридические документы</a>
-      <a href="#">Способы оплаты</a>
+      <p>© YouTalk, 2018 – 2022</p>
+      <div>
+        <a href="#">Юридические документы</a>
+        <a href="#">Способы оплаты</a>
+      </div>
     </div>
   </div>
 </footer>
